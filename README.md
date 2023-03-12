@@ -29,4 +29,4 @@ The following e-commerce sites were scraped for collecting the laptop price data
 * Access the web application on your browser by visiting http://localhost:5000/
 
 ## Online
-* Access the web application by visiting https://example.com/
+* Access the web application by visiting https://laptop-price-predictor-ai-mzbt.onrender.com/
