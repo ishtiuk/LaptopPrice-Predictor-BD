@@ -6,8 +6,8 @@ This project aims to predict the prices of laptops in Bangladesh in 2023. The ma
 The following e-commerce sites were scraped for collecting the laptop price data:
 
 * https://www.startech.com.bd/laptop-notebook
-* https://www.ryanscomputers.com/category/laptop-all-laptop?
-* https://www.techlandbd.com/shop-laptop-computer/brand-laptops/
+* https://www.ryanscomputers.com/category/laptop-all-laptop
+* https://www.techlandbd.com/shop-laptop-computer/brand-laptops
 
 
 ## Libraries used
