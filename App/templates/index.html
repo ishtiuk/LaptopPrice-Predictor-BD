@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Laptop Price Predictor AI</title>
+    <!-- Tailwind CSS Link -->
+    <link href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-gradient-to-r from-blue-500 to-aqua-900 shadow-lg">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 justify-between">
+          <div class="flex items-center">
+            <a href="#" class="flex flex-shrink-0 items-center text-lg font-bold">
+              <span class="text-white">Laptop Price Predictor AI</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Main Content -->
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="overflow-hidden rounded-lg bg-white shadow">
+        <div class="px-4 py-5 sm:p-6">
+          <form action="/predict" method="post">
+            <!-- Laptop Brand Input -->
+            <div class="grid grid-cols-2 gap-4">
+              <div class="mb-4">
+                <label class="mb-2 block font-bold text-gray-900" for="laptopBrand"> Laptop Brand </label>
+                <input list="laptopBrandList" class="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-900 bg-gray-100 focus:outline-none" name="brand" type="text" placeholder="Select a brand"  required="required"/>
+                <datalist id="laptopBrandList">
+                  <option value="Acer"></option>
+                  <option value="Apple"></option>
+                  <option value="Asus"></option>
+                  <option value="Dell"></option>
+                  <option value="Gigabyte"></option>
+                  <option value="Hp"></option>
+                  <option value="Huawei"></option>
+                  <option value="Lenovo"></option>
+                  <option value="Msi"></option>
+                  <option value="Toshiba"></option>
+                  <option value="Walton"></option>
+                </datalist>
+              </div>
+
+              <!-- Type Input -->
+              <div class="mb-4">
+                <label class="mb-2 block font-bold text-gray-900" for="type"> Type </label>
+                <input list="typeList" class="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-900 bg-gray-100 focus:outline-none" name="typa" type="text" placeholder="Select a type" required="required"/>
+                <datalist id="typeList">
+                  <option value="MacBook"></option>
+                  <option value="ZenBook"></option>
+                  <option value="Notebook"></option>
+                  <option value="Gaming"></option>
+                  <option value="VivoBook"></option>
+                  <option value="ExpertBook / UltraBook"></option>
+                </datalist>
+              </div>
+
+              <!-- Processor Input -->
+              <div class="mb-4">
+                <label class="mb-2 block font-bold text-gray-900" for="processor"> Processor </label>
+                <input list="processorList" class="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-900 bg-gray-100 focus:outline-none" name="cpu" type="text" placeholder="Select a processor" required="required"/>
+                <datalist id="processorList">
+                  <option value="Apple M1" />
+                  <option value="Apple M2" />
+                  <option value="Intel Core i3" />
+                  <option value="Intel Core i5" />
+                  <option value="Intel Core i7" />
+                  <option value="Intel Core i9" />
+                  <option value="Intel Pentium" />
+                  <option value="Intel Celeron" />
+                  <option value="AMD Ryzen 3" />
+                  <option value="AMD Ryzen 5" />
+                  <option value="AMD Ryzen 7" />
+                  <option value="AMD Ryzen 9" />
+                  <option value="Other Intel Processor" />
+                  <option value="Other AMD Processor" />
+                </datalist>
+              </div>
+
+              <!-- Ram Input -->
+              <div class="mb-4">
+                <label class="mb-2 block font-bold text-gray-900" for="ram"> RAM (in GB) </label>
+                <input class="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-900 bg-gray-100 focus:outline-none" name="ram" type="number" placeholder="e.g. 16" required="required"/>
+              </div>
+
+              <!-- Screen Resolution Input -->
+              <div class="mb-4">
+                <label class="mb-2 block font-bold text-gray-900" for="screenResolution"> Screen Resolution </label>
+                <input list="screenResolutionList" class="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-900 bg-gray-100 focus:outline-none" name="sc_res" type="text" placeholder="Select a screen resolution" required="required"/>
+                <datalist id="screenResolutionList">
+                  <option value="2560x1600" />
+                  <option value="2560x1664" />
+                  <option value="1920x1080" />
+                  <option value="2880x1800" />
+                  <option value="3456x2234" />
+                  <option value="3024x1964" />
+                  <option value="2560x1440" />
+                  <option value="3840x2160" />
+                  <option value="3840x2400" />
+                  <option value="2240x1400" />
+                  <option value="1920x1200" />
+                  <option value="2560x1920" />
+                  <option value="1366x768" />
+                  <option value="1280x720" />
+                  <option value="1360x768" />
+                  <option value="366x768" />
+                  <option value="1280x800" />
+                  <option value="1920x1280" />
+                </datalist>
+              </div>
+
+              <div class="mb-4">
+                <label class="mb-2 block font-bold text-gray-900" for="ram"> Screen Size (in Inch)</label>
+                <input class="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-900 bg-gray-100 focus:outline-none" name="sc_size" type="text" placeholder="Enter Screen Size in (inch)" required="required"/>
+              </div>
+
+              <!-- Touchscreen Input -->
+              <div class="mb-4">
+                <label class="mb-2 block font-bold text-gray-900" for="touchscreen">Touchscreen</label>
+                <div class="relative">
+                  <select name="touchscreen" class="form-select block w-full rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-gray-900 bg-gray-100 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500" name="touchscreen" id="touchscreen">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- IPS Display Input -->
+              <div class="mb-4">
+                <label class="mb-2 block font-bold text-gray-900" for="ips_display">IPS Display</label>
+                <div class="relative">
+                  <select name="ips" class="form-select block w-full rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-gray-900 bg-gray-100 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500" name="ips_display" id="ips_display">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+              </div>
+
+
+              <div class="mb-4">
+                <label class="mb-2 block font-bold text-gray-900" for="gpu"> GPU </label>
+                <input list="gpuList" class="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-900 bg-gray-100 focus:outline-none" name="gpu" type="text" placeholder="Select a GPU" required="required"/>
+                <datalist id="gpuList">
+                  <option value="NVIDIA GPU Card" />
+                  <option value="AMD GPU Card" />
+                  <option value="Apple Integrated" />
+                  <option value="Intel Integrated" />
+                  <option value="AMD Integrated" />
+                </datalist>
+              </div>
+
+              <div class="mb-4">
+                <label class="mb-2 block font-bold text-gray-900" for="os"> Operating System </label>
+                <input list="osList" class="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-900 bg-gray-100 focus:outline-none" name="os" type="text" placeholder="Select a Operating System" required="required"/>
+                <datalist id="osList">
+                  <option value="Windows 11" />
+                  <option value="Windows 10" />
+                  <option value="macOS" />
+                  <option value="Free-DOS" />
+                  <option value="Linux" />
+                </datalist>
+              </div>
+
+              <div class="mb-4">
+                <label class="mb-2 block font-bold text-gray-900" for="NVMe"> NVMe (in GB) </label>
+                <input class="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-900 bg-gray-100 focus:outline-none" name="NVMe" type="number" placeholder="e.g. 128"/>
+              </div>
+
+              <div class="mb-4">
+                <label class="mb-2 block font-bold text-gray-900" for="SSD"> SSD (in GB) </label>
+                <input class="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-900 bg-gray-100 focus:outline-none" name="SSD" type="number" placeholder="e.g. 512">
+              </div>
+
+              <div class="mb-4">
+                <label class="mb-2 block font-bold text-gray-900" for="HDD"> HDD (in GB) </label>
+                <input class="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-900 bg-gray-100 focus:outline-none" name="HDD" type="number" placeholder="e.g. 1000">
+              </div>
+
+              <div class="mb-4">
+                <label class="mb-2 block font-bold text-gray-900" for="HDD"> Weight (in Kg) </label>
+                <input class="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-900 bg-gray-100 focus:outline-none" name="weight" placeholder="e.g. 1.5"  required="required" type="text">
+              </div>
+
+              <div class="mt-3 flex items-center">
+                <button class="rounded-lg bg-blue-500 py-2 px-8 text-lg font-bold text-white hover:bg-blue-700" id="predictButton" type="submit">Predict Price</button>
+                <svg class="animate-spin ml-4 h-5 w-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647zm14-2.647A7.962 7.962 0 0120 12h4c0 3.042-1.135 5.824-3 7.938l-3-2.647z"></path>
+                </svg>
+              </div>
+            </div>
+          </form>
+
+          <!-- Output -->
+          {% if output_price %}
+          <div class="mt-5">
+            <h2 class="mb-2 text-2xl font-semibold">Estimated Price:  {{output_price}} BDT</h2>
+            <p class="text-lg font-bold text-gray-700" id="estimatedPrice"></p>
+          </div>
+          {% endif %}
+          <!-- End Output -->
+
+
+          {% if error %}
+          <div class="mt-5">
+            <h2 class="mb-2 text-2xl font-semibold"><span class="text-red-500 font-bold">ERROR!</span> Try Again Please.</h2>
+            <p class="text-lg font-bold text-gray-700" id="estimatedPrice"></p>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-gradient-to-r from-blue-500 to-aqua-900 shadow-lg py-4">
+      <div class="container mx-auto flex justify-between px-4">
+        <p class="text-white">&copy; 2023 Laptop Price Predictor AI</p>
+        <p class="text-white">Developed by <a href="https://www.linkedin.com/in/ishtiuk-ahammed/" class="text-blue-500" target="_blank">Md. Ishtiuk Ahammed</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
