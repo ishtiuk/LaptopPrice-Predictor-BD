@@ -5,27 +5,27 @@ This project aims to predict the prices of laptops in Bangladesh in 2023. The ma
 ## Data Sources
 The following e-commerce sites were scraped for collecting the laptop price data:
 
-https://www.startech.com.bd/laptop-notebook
-https://www.ryanscomputers.com/category/laptop-all-laptop?
-https://www.techlandbd.com/shop-laptop-computer/brand-laptops/
+* https://www.startech.com.bd/laptop-notebook
+* https://www.ryanscomputers.com/category/laptop-all-laptop?
+* https://www.techlandbd.com/shop-laptop-computer/brand-laptops/
 
 
 ## Libraries used
 * Python (version x.x.x)
 * Beautiful Soup (version x.x.x)
 * Pandas (version x.x.x)
-NumPy (version x.x.x)
-Scikit-learn (version x.x.x)
-XGBoost (version x.x.x)
-Flask (version x.x.x)
-Pickle (version x.x.x)
+* NumPy (version x.x.x)
+* Scikit-learn (version x.x.x)
+* XGBoost (version x.x.x)
+* Flask (version x.x.x)
+* Pickle (version x.x.x)
 
 
 ## How to Use
 ## On Local Machine
-Clone the repository to your local machine
-Run the Flask application using the command python app.py
-Access the web application on your browser by visiting http://localhost:5000/
+* Clone the repository to your local machine
+* Run the Flask application using the command python app.py
+* Access the web application on your browser by visiting http://localhost:5000/
 
 ## Online
-Access the web application by visiting https://example.com/
+* Access the web application by visiting https://example.com/
