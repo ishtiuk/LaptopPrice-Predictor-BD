@@ -11,9 +11,9 @@ https://www.techlandbd.com/shop-laptop-computer/brand-laptops/
 
 
 ## Libraries used
-Python (version x.x.x)
-Beautiful Soup (version x.x.x)
-Pandas (version x.x.x)
+* Python (version x.x.x)
+* Beautiful Soup (version x.x.x)
+* Pandas (version x.x.x)
 NumPy (version x.x.x)
 Scikit-learn (version x.x.x)
 XGBoost (version x.x.x)
