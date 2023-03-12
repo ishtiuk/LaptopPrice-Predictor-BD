@@ -7,7 +7,7 @@ warnings.filterwarnings('ignore')
 
 app = Flask(__name__)
 
-model = load(open('model/pipe_final_model.bin', 'rb'))
+model = load(open('mdl/pipe_final_model.bin', 'rb'))
 
 @app.route('/')
 def home():
@@ -49,3 +49,6 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+    
+  
