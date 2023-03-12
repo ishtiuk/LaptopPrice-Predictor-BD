@@ -11,19 +11,20 @@ The following e-commerce sites were scraped for collecting the laptop price data
 
 
 ## Libraries used
-* Python (version x.x.x)
-* Beautiful Soup (version x.x.x)
-* Pandas (version x.x.x)
-* NumPy (version x.x.x)
-* Scikit-learn (version x.x.x)
-* XGBoost (version x.x.x)
-* Flask (version x.x.x)
-* Pickle (version x.x.x)
+* Python
+* Beautiful Soup
+* Pandas
+* NumPy
+* Scikit-learn
+* XGBoost
+* Flask
+* Pickle
 
 
 ## How to Use
 ## On Local Machine
 * Clone the repository to your local machine
+* Go to "App/" directory
 * Run the Flask application using the command python app.py
 * Access the web application on your browser by visiting http://localhost:5000/
 
