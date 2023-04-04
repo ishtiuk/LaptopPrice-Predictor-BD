@@ -1,32 +1,18 @@
-# LaptopPrice-Predictor-2023-BD
-### Laptop Price Prediction Model
-This project aims to predict the prices of laptops in Bangladesh in 2023. The machine learning model was built using XGBoost regressor and trained on the current prices of laptops collected from various Bangladeshi e-commerce sites. The data was collected through web scraping using Python's Beautiful Soup library, which took 5 days for scraping and cleaning. After performing exploratory data analysis, data preprocessing, and feature engineering, the XGBoost regressor was selected as the best model through cross-fold validation and GridSearchCV. The model was saved using Pickle, and a web application was created using Flask and hosted on Render.
+# Movie Recommender AI System
 
-## Data Sources
-The following e-commerce sites were scraped for collecting the laptop price data:
+This is a movie recommender AI system that uses a content-based approach to recommend similar movies to the user. It generates a tagline for each movie using its overview text, genres, keywords, cast characters info, and director name. Then, it uses cosine similarity to calculate the similarity score between the movies based on their taglines and recommends the 7 closest movies holding the largest cosine similarity scores.
 
-* https://www.startech.com.bd/laptop-notebook
-* https://www.ryanscomputers.com/category/laptop-all-laptop
-* https://www.techlandbd.com/shop-laptop-computer/brand-laptops
+## Dataset
 
+The dataset used for this project is the [TMDB movie metadata dataset](https://www.kaggle.com/tmdb/tmdb-movie-metadata), which contains information about over 5000 movies, including their titles, overview texts, genres, keywords, cast characters info, and director names.
 
-## Libraries used
-* Python
-* Beautiful Soup
-* Pandas
-* NumPy
-* Scikit-learn
-* XGBoost
-* Flask
-* Pickle
+## Usage
 
+To use this movie recommender AI system, simply provide the title of a movie as input, and it will recommend 7 similar movies based on the movie's features. You can adjust the number of recommended movies by changing the value in the code.
 
-## How to Use
-## On Local Machine
-* Clone the repository to your local machine
-* Go to "App/" directory
-* Run the Flask application using the command python app.py
-* Access the web application on your browser by visiting http://localhost:5000/
+```python
+# Example usage
+from movie_recommender import recommend_movies
 
-## Online
-* Access the web application by visiting https://laptop-price-predictor-ai-mzbt.onrender.com/
+# recommend 10 movies similar to "The Dark Knight"
+recommend_movies("The Dark Knight", num_movies=10)
