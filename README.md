@@ -1,6 +1,6 @@
 # LaptopPrice-Predictor-2023-BD
 ### Laptop Price Prediction Model
-This project aims to predict the prices of laptops in Bangladesh in 2023. The machine learning model was built using XGBoost regressor and trained on the current prices of laptops collected from various Bangladeshi e-commerce sites. The data was collected through web scraping using Python's Beautiful Soup library, which took 5 days for scraping and cleaning. After performing exploratory data analysis, data preprocessing, and feature engineering, the XGBoost regressor was selected as the best model through cross-fold validation and GridSearchCV. The model was saved using Pickle, and a web application was created using Flask and hosted on Render.
+This project aims to predict the prices of laptops in Bangladesh in 2023. The machine learning model was built using XGBoost regressor and trained on the current prices of laptops collected from various Bangladeshi e-commerce sites. The data was collected through web scraping using Python's Beautiful Soup library, which took around 8 days just for scraping and cleaning. After performing exploratory data analysis, data preprocessing, and feature engineering, the XGBoost regressor was selected as the best model through cross-fold validation and GridSearchCV. The model was saved using Pickle, and a web application was created using Flask and hosted on Render.
 
 ## Data Sources
 The following e-commerce sites were scraped for collecting the laptop price data:
